@@ -45,6 +45,65 @@
 npm install -g @decentology/dappstarter
 ```
 
+# Tangent learning etherium nft solidity
+## tutorial link: [](https://techbrij.com/setup-local-private-blockchain-deploy-smart-contract-ethereum-dapp-part-2)
+```bash
+npm install -g truffle
+truffle init
+
+truffle create contract HelloWorld
+truffle compile
+truffle create migration HelloWorld
+```
+#### adjust truffle-config.js to match your port number mine happens to be 7545
+```
+
+truffle migrate
+
+
+truffle console
+let instance = await HelloWorld.deployed()
+instance.getMessage()
+```
+## Success! 🎉🎉🎉
+![](assets/2021-08-23-14-11-19.png)
+
+### Run another piece of code
+```bash
+let accounts = await web3.eth.getAccounts()
+instance.setName('Ram',{from: accounts[0]})
+instance.getMessage()
+```
+![](assets/2021-08-23-14-13-28.png)
+![](assets/2021-08-23-14-14-39.png)
+### create unit tests
+```bash
+truffle create test HelloWorld
+
+truffle develop
+truffle(develop)> migrate
+truffle(develop)> test
+Mnemonic: draft melody index license maid receive uncover maid upper jealous rotate play
+http://127.0.0.1:9545/
+```
+
+
+# setup server for app
+### setup express
+### https://techbrij.com/web-ui-smart-contract-ethereum-dapp-part-4
+```bash
+
+npm init
+npm install express --save
+
+npm install dotenv --save
+npm start
+
+sudo apt-get install build-essential
+
+npm install truffle-contract --save-dev
+```
+
 -----------------
 # Contributors
 
