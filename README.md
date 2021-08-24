@@ -157,6 +157,15 @@ instance.getMessage()
 curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 npm run webpack
+
+heroku login
+heroku git:remote -a eth-demo
+
+git config --global user.email "oranbusiness@gmail.com"
+git config --global user.name "Oran C"
+git add .
+git commit -am "[add] heroku stuff"
+git push heroku master
 ```
 -----------------
 # Contributors
