@@ -102,8 +102,62 @@ npm start
 sudo apt-get install build-essential
 
 npm install truffle-contract --save-dev
+
+
+FIX: use old version of webpack
+npm install webpack@4 webpack-cli@4 --save-dev
+
+
+npm run webpack
+
+npm run dev
+```
+### issue 
+![](assets/2021-08-23-22-39-01.png)
+### fix
+#### block chain is not running!
+#### open genache
+#### verify that the port is correctly set in both .env and truffle-config.js
+```bash
+# window 1
+# truffle compile
+# truffle create migration HelloWorld
+# truffle migrate
+
+truffle migrate --reset
+# window 2
+npm run dev
 ```
 
+
+### setting up with infra
+```bash
+
+
+how to get free eth on test net
+https://faucet.rinkeby.io/
+
+
+npm install truffle-hdwallet-provider --save
+
+truffle migrate --network rinkeby
+https://rinkeby.etherscan.io/address/0x2266b382D688AF7CF510dbaF3A7961b6C8d0933a
+
+https://rinkeby.etherscan.io/address/0x2266b382d688af7cf510dbaf3a7961b6c8d0933a
+
+truffle console --network rinkeby
+let instance = await HelloWorld.deployed()
+instance.getMessage()
+
+
+let accounts = await web3.eth.getAccounts()
+instance.setName('Ram',{from: accounts[0]})
+instance.getMessage()
+
+curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+npm run webpack
+```
 -----------------
 # Contributors
 

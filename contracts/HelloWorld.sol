@@ -6,12 +6,12 @@ string defaultName;
 mapping (address => string) public accounts; 
  
 constructor() public{
-    defaultName = 'World';
+    defaultName = 'buts';
 }
  
 function getMessage() public view returns(string memory){
     string memory name = bytes(accounts[msg.sender]).length > 0 ? accounts[msg.sender] : defaultName;
-    return concat("Hello " , name);
+    return concat("Hell5 " , name);
 }
  
  

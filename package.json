@@ -8,6 +8,8 @@
   },
   "scripts": {
     "start": "node server/main.js",
+    "dev": "node_modules/.bin/webpack && node server/main.js",
+    "webpack": "node_modules/.bin/webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +24,12 @@
   "homepage": "https://github.com/wisehackermonkey/solana-demo#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "truffle-contract": "^4.0.31",
+    "webpack-cli": "^4.8.0"
   }
 }
