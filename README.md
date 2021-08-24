@@ -163,6 +163,7 @@ heroku git:remote -a eth-demo
 
 git config --global user.email "oranbusiness@gmail.com"
 git config --global user.name "Oran C"
+sudo apt-get install git-lfs
 git add .
 git commit -am "[add] heroku stuff"
 git push heroku master
