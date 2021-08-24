@@ -159,7 +159,7 @@ curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 npm run webpack
 
 heroku login
-heroku git:remote -a eth-demo
+heroku git:remote -a solana-demo
 
 git config --global user.email "oranbusiness@gmail.com"
 git config --global user.name "Oran C"
