@@ -168,6 +168,63 @@ git add .
 git commit -am "[add] heroku stuff"
 git push heroku master
 ```
+
+
+# getting back to actually making a solana hello world
+```
+git clone https://github.com/solana-labs/example-helloworld.git
+cd example-helloworld
+INSTALL RUST
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustc
+INSTALL SOLANA CLI
+sh -c "$(curl -sSfL https://release.solana.com/v1.7.10/install)"
+<!-- export PATH="~/.local/share/solana/install/active_release/bin:$PATH" >> ~/.profile -->
+code ~/.profile
+solana --version
+npm --version
+node --version
+solana config set --url localhost
+```
+![](assets/2021-08-26-10-50-53.png)
+```
+solana-keygen new
+solana-test-validator
+# new page
+solana logs
+
+npm install
+rustup component add rustfmt
+rustup update
+### https://github.com/solana-labs/solana
+sudo apt-get update
+<!-- sudo apt-get install libssl-dev libudev-dev pkg-config zlib1g-dev llvm clang make -->
+cd src/program-rust/
+cargo build
+npm run build:program-rust
+
+
+solana-test-validator
+solana program deploy dist/program/helloworld.so
+
+npm run start
+## new terminal window
+solana logs
+```
+### configure devnet 
+```bash
+https://docs.solana.com/cli/choose-a-cluster
+solana config get
+```
+
+# fix for getting rust installed on wsl
+### https://reginafurness.medium.com/installing-rust-on-windows-and-visual-studio-code-with-wsl-fa4fb92ffd1
+#### https://visualstudio.microsoft.com/visual-cpp-build-tools/
+#### Restart you pc and then run ---v again
+```bash
+npm run build:program-rust
+```
+![](assets/2021-08-28-09-58-09.png)
 -----------------
 # Contributors
 
